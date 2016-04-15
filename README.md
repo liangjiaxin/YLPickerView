@@ -19,6 +19,6 @@ _mpicker.bkcolorArry = @[color1,color1,color1,color2,color2];
 
 _mpicker.isBJZM = YES;
 
-![github](https://raw.github.com/liangjiaxin/YLPickerView/master/slimage/qq.png "github")
-
 ![github](https://raw.github.com/liangjiaxin/YLPickerView/master/slimage/ww.png "github")
+
+![github](https://raw.github.com/liangjiaxin/YLPickerView/master/slimage/qq.png "github")
