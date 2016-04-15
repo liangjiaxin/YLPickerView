@@ -27,6 +27,14 @@ typedef NS_ENUM(NSInteger, MTimeType) {
 @property (nonatomic,strong) MPickerCellView *picker3;
 @property (nonatomic,strong) MPickerCellView *picker4;
 
+@property (nonatomic,strong) UILabel  *mhLabel0;
+@property (nonatomic,strong) UILabel  *mhLabel1;
+@property (nonatomic,strong) UILabel  *mhLabel2;
+@property (nonatomic,strong) UILabel  *mhLabel3;
+@property (nonatomic,strong) UILabel  *mhLabel4;
+@property (nonatomic,strong) UILabel  *mhLabel5;
+@property (nonatomic,strong) UILabel  *mhLabel6;
+
 @property (nonatomic,strong) UILabel *masklabel;
 
 @property (nonatomic,strong) NSString *year;
@@ -74,8 +82,17 @@ typedef NS_ENUM(NSInteger, MTimeType) {
     _picker0.frame = CGRectMake(10, 55, wid, 210);
     _picker1.frame = CGRectMake(wid+20, 55, wid, 210);
     _picker2.frame = CGRectMake(2*(wid+10)+10, 55, wid, 210);
-    _picker3.frame = CGRectMake(3*(wid+10)+10, 55, wid, 210);
-    _picker4.frame = CGRectMake(4*(wid+10)+10, 55, wid, 210);
+    _picker3.frame = CGRectMake(3*(wid+10)+10, 55, wid+5, 210);
+    _picker4.frame = CGRectMake(4*(wid+10)+10-5, 55, wid+5, 210);
+    
+    _mhLabel0.frame = CGRectMake(4*(wid+10), 55, 10, 30);
+    _mhLabel1.frame = CGRectMake(4*(wid+10), 55+30, 10, 30);
+    _mhLabel2.frame = CGRectMake(4*(wid+10), 55+30*2, 10, 30);
+    _mhLabel3.frame = CGRectMake(4*(wid+10), 55+30*3, 10, 30);
+    _mhLabel4.frame = CGRectMake(4*(wid+10), 55+30*4, 10, 30);
+    _mhLabel5.frame = CGRectMake(4*(wid+10), 55+30*5, 10, 30);
+    _mhLabel6.frame = CGRectMake(4*(wid+10), 55+30*6, 10, 30);
+    
     _masklabel.frame = CGRectMake(10, 145, self.bounds.size.width-20, 30);
     
 }
@@ -135,8 +152,8 @@ typedef NS_ENUM(NSInteger, MTimeType) {
     _picker0 = [[MPickerCellView alloc] initWithFrame:CGRectMake(10, 55, wid, 210)];
     _picker1 = [[MPickerCellView alloc] initWithFrame:CGRectMake(wid+20, 55, wid, 210)];
     _picker2 = [[MPickerCellView alloc] initWithFrame:CGRectMake(2*(wid+10)+10, 55, wid, 210)];
-    _picker3 = [[MPickerCellView alloc] initWithFrame:CGRectMake(3*(wid+10)+10, 55, wid, 210)];
-    _picker4 = [[MPickerCellView alloc] initWithFrame:CGRectMake(4*(wid+10)+10, 55, wid, 210)];
+    _picker3 = [[MPickerCellView alloc] initWithFrame:CGRectMake(3*(wid+10)+10, 55, wid+5, 210)];
+    _picker4 = [[MPickerCellView alloc] initWithFrame:CGRectMake(4*(wid+10)+10-5, 55, wid+5, 210)];
     
     _picker0.mTableView.backgroundColor = [UIColor colorWithRed:100.0/255.0 green:100.0/255.0 blue:100.0/255.0 alpha:1];
     _picker1.mTableView.backgroundColor = [UIColor colorWithRed:100.0/255.0 green:100.0/255.0 blue:100.0/255.0 alpha:1];
@@ -161,6 +178,46 @@ typedef NS_ENUM(NSInteger, MTimeType) {
     [self addSubview:_picker2];
     [self addSubview:_picker3];
     [self addSubview:_picker4];
+    
+    _mhLabel0 = [[UILabel alloc] initWithFrame:CGRectMake(4*(wid+10), 55, 10, 30)];
+    _mhLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(4*(wid+10), 55+30, 10, 30)];
+    _mhLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(4*(wid+10), 55+30*2, 10, 30)];
+    _mhLabel3 = [[UILabel alloc] initWithFrame:CGRectMake(4*(wid+10), 55+30*3, 10, 30)];
+    _mhLabel4 = [[UILabel alloc] initWithFrame:CGRectMake(4*(wid+10), 55+30*4, 10, 30)];
+    _mhLabel5 = [[UILabel alloc] initWithFrame:CGRectMake(4*(wid+10), 55+30*5, 10, 30)];
+    _mhLabel6 = [[UILabel alloc] initWithFrame:CGRectMake(4*(wid+10), 55+30*6, 10, 30)];
+    
+    _mhLabel0.textAlignment = NSTextAlignmentCenter;
+    _mhLabel1.textAlignment = NSTextAlignmentCenter;
+    _mhLabel2.textAlignment = NSTextAlignmentCenter;
+    _mhLabel3.textAlignment = NSTextAlignmentCenter;
+    _mhLabel4.textAlignment = NSTextAlignmentCenter;
+    _mhLabel5.textAlignment = NSTextAlignmentCenter;
+    _mhLabel6.textAlignment = NSTextAlignmentCenter;
+    
+    _mhLabel0.textColor = [UIColor whiteColor];
+    _mhLabel1.textColor = [UIColor whiteColor];
+    _mhLabel2.textColor = [UIColor whiteColor];
+    _mhLabel3.textColor = [UIColor whiteColor];
+    _mhLabel4.textColor = [UIColor whiteColor];
+    _mhLabel5.textColor = [UIColor whiteColor];
+    _mhLabel6.textColor = [UIColor whiteColor];
+    
+    _mhLabel0.text = @":";
+    _mhLabel1.text = @":";
+    _mhLabel2.text = @":";
+    _mhLabel3.text = @":";
+    _mhLabel4.text = @":";
+    _mhLabel5.text = @":";
+    _mhLabel6.text = @":";
+    
+    [self addSubview:_mhLabel0];
+    [self addSubview:_mhLabel1];
+    [self addSubview:_mhLabel2];
+    [self addSubview:_mhLabel3];
+    [self addSubview:_mhLabel4];
+    [self addSubview:_mhLabel5];
+    [self addSubview:_mhLabel6];
     
     //中间遮罩
     _masklabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 145, self.bounds.size.width-20, 30)];
@@ -199,7 +256,7 @@ typedef NS_ENUM(NSInteger, MTimeType) {
     //当时在数组里的下标
     NSInteger hhIndex = [_hh integerValue] - 1;
     //当分在数组里的下标
-    NSInteger mmIndex = [_mm integerValue] - 1;
+    NSInteger mmIndex = [_mm integerValue];
     
     _picker0.defaultSelect = yearIndex;
     _picker1.defaultSelect = monthIndex;

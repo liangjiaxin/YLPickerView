@@ -6,7 +6,6 @@
 //  Copyright © 2016年 mushoom. All rights reserved.
 //
 
-
 #define WIDE [[UIScreen mainScreen] bounds].size.width       //屏幕宽
 #define HIGH [[UIScreen mainScreen] bounds].size.height      //屏幕高
 
