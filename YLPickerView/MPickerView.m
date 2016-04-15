@@ -283,7 +283,11 @@ typedef NS_ENUM(NSInteger, MTimeType) {
         
         _year = content;
         if([_month isEqual:@"2"]){
-            _picker2.dataArry = [CalculationTime calculationDay:_year andMonth:_month];
+            if(_isBJZM){
+                _picker2.dataArry = [CalculationTime calculationDay2:_year andMonth:_month];
+            }else{
+                _picker2.dataArry = [CalculationTime calculationDay:_year andMonth:_month];
+            }
             if(_picker2.dataArry.count < [_day integerValue]){
                 _day = [NSString stringWithFormat:@"%tu",_picker2.dataArry.count];
             }
@@ -292,7 +296,11 @@ typedef NS_ENUM(NSInteger, MTimeType) {
     }else if(tag == 1){
         
         _month = content;
-        _picker2.dataArry = [CalculationTime calculationDay:_year andMonth:_month];
+        if(_isBJZM){
+            _picker2.dataArry = [CalculationTime calculationDay2:_year andMonth:_month];
+        }else{
+            _picker2.dataArry = [CalculationTime calculationDay:_year andMonth:_month];
+        }
         if(_picker2.dataArry.count < [_day integerValue]){
             _day = [NSString stringWithFormat:@"%tu",_picker2.dataArry.count];
         }
