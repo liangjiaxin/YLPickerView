@@ -35,6 +35,30 @@
 }
 
 /**
+ *设置默认时间
+ */
++ (NSDictionary *)calculationDefaultTime:(NSString *)defaultTime{
+    
+    NSString *format = @"YYYY-MM-dd HH:mm";
+    
+    NSDateFormatter *dateformatter = [[NSDateFormatter alloc] init];
+    [dateformatter setDateFormat:format];
+    NSDate *senddate = [dateformatter dateFromString:defaultTime];
+    NSString *time = [dateformatter stringFromDate:senddate];
+    
+    NSArray *ary = [time componentsSeparatedByString:@" "];
+    NSArray *ary1 = [ary[0] componentsSeparatedByString:@"-"];
+    NSArray *ary2 = [ary[1] componentsSeparatedByString:@":"];
+    
+    return @{@"year":ary1[0],
+             @"month":[NSString stringWithFormat:@"%tu",[ary1[1] integerValue]],
+             @"day":[NSString stringWithFormat:@"%tu",[ary1[2] integerValue]],
+             @"hh":[NSString stringWithFormat:@"%tu",[ary2[0] integerValue]],
+             @"mm":ary2[1]};
+    
+}
+
+/**
  *获取年
  */
 + (NSArray *)calculationYear{

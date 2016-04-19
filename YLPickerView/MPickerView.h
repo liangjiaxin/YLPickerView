@@ -37,4 +37,9 @@
  */
 @property (nonatomic,strong) NSArray *bkcolorArry;
 
+/**
+ *设置默认时间,注意格式YYYY-MM-dd HH:mm(不设置就默认当前时间)
+ */
+@property (nonatomic,strong) NSString *defaultDate;
+
 @end

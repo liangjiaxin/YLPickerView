@@ -15,6 +15,10 @@
  */
 + (NSDictionary *)calculationNowTime;
 
+/**
+ *设置默认时间
+ */
++ (NSDictionary *)calculationDefaultTime:(NSString *)defaultTime;
 
 /**
  *获取年

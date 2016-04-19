@@ -117,6 +117,12 @@ typedef NS_ENUM(NSInteger, MTimeType) {
     _picker4.mTableView.backgroundColor = bkcolorArry[4];
 }
 
+//设置默认时间
+- (void)setDefaultDate:(NSString *)defaultDate{
+    _defaultDate = defaultDate;
+    [self AddData];
+}
+
 //加载控件
 - (void)viewDidLoad{
     
@@ -230,7 +236,12 @@ typedef NS_ENUM(NSInteger, MTimeType) {
 //初始化数据
 - (void)AddData{
     
-    NSDictionary *dictTime = [CalculationTime calculationNowTime];
+    NSDictionary *dictTime;
+    if(_defaultDate){
+        dictTime = [CalculationTime calculationDefaultTime:_defaultDate];
+    }else{
+        dictTime = [CalculationTime calculationNowTime];
+    }
     _year = dictTime[@"year"];
     _month = dictTime[@"month"];
     _day = dictTime[@"day"];

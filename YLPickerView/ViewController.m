@@ -52,6 +52,8 @@
     _mpicker.bkcolorArry = @[color1,color1,color1,color2,color2];
     //是否标记周末
     _mpicker.isBJZM = YES;
+    //设置默认时间
+    _mpicker.defaultDate = @"2015-1-1 14:20";
 }
 
 #pragma -mark MPickerDelegate
